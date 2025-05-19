@@ -4,6 +4,7 @@ import java.io.*; // try, IOException, BufferedWriter 기능 사용
 import java.util.*;
 
 public class BookManager {
+    // 도서를 저장할 리스트
     private List<Book> bookList = new ArrayList<>();
 
     // 책 추가
@@ -19,7 +20,7 @@ public class BookManager {
     // CSV 파일로 저장
     public void saveCSV(String fileName) {
         // try, catch문을 활용하여 프로그램 오류 방지, 예외처리
-        // BufferedWriter(): 문자열 효율적으로 처리를 위하여 사용
+        // BufferedWriter(): 문자열을 내부 버퍼에 모았다가 처리를 위하여 사용
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName)))
         {
             // bookList의 객체들을 하나씩 book변수에 담고 실행
